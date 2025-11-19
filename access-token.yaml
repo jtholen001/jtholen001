@@ -1,11 +1,13 @@
 origin: jtholen001/.github-access-token
 allowed-subjects:
    - 'repo:jtholen001/*:**'
+   - 'repo:jtholen001/test-plugin:**'
 allowed-repository-permissions:
   contents: read
 statements:
   - subjects:
     - repo:${origin}:ref:refs/heads/main
+    - repo:jtholen001/test-plugin:ref:refs/tags/*
     - repo:${origin}:ref:refs/tags/*
     - repo:${origin}:workflow_ref:${origin}/.github/workflows/publish.yml@refs/tags/*
 
